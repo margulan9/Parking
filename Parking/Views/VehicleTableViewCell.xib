@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ReusableVehicleCell" selectionStyle="default" indentationWidth="10" rowHeight="57" id="KGk-i7-Jjw" customClass="VehicleTableViewCell" customModule="Parking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="57"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Epy-SM-u9F">
+                        <rect key="frame" x="22" y="19" width="274" height="30"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-Kv-f9X">
+                                <rect key="frame" x="0.0" y="0.0" width="274" height="21.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-2d-eEh">
+                                        <rect key="frame" x="0.0" y="1.5" width="28" height="19"/>
+                                        <color key="tintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="28" id="kZ4-r1-nA7"/>
+                                            <constraint firstAttribute="height" constant="22" id="ky0-8m-vCj"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001 ALA 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC2-xq-iyX">
+                                        <rect key="frame" x="44" y="0.0" width="230" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8e1-bi-fIi">
+                                <rect key="frame" x="0.0" y="29.5" width="274" height="0.5"/>
+                                <color key="backgroundColor" red="0.77625960110000003" green="0.77698045969999996" blue="0.78356832269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="RP4-mv-Nbt"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="HnR-Kv-f9X" firstAttribute="top" secondItem="Epy-SM-u9F" secondAttribute="top" id="CC1-iy-X8a"/>
+                            <constraint firstAttribute="trailing" secondItem="HnR-Kv-f9X" secondAttribute="trailing" id="ce9-QO-Ozw"/>
+                            <constraint firstItem="8e1-bi-fIi" firstAttribute="top" secondItem="HnR-Kv-f9X" secondAttribute="bottom" constant="8" id="g70-4j-BgU"/>
+                            <constraint firstItem="HnR-Kv-f9X" firstAttribute="leading" secondItem="Epy-SM-u9F" secondAttribute="leading" id="k1a-GG-VAj"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Epy-SM-u9F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="FeJ-Ef-kSA"/>
+                    <constraint firstAttribute="bottom" secondItem="Epy-SM-u9F" secondAttribute="bottom" id="FeQ-c4-pu4"/>
+                    <constraint firstItem="Epy-SM-u9F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="GvG-ZP-C6g"/>
+                    <constraint firstAttribute="trailing" secondItem="Epy-SM-u9F" secondAttribute="trailing" constant="24" id="K3h-2m-bea"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="vehicleNumberLabel" destination="qC2-xq-iyX" id="XbJ-wh-Oeg"/>
+            </connections>
+            <point key="canvasLocation" x="144.92753623188406" y="120.20089285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="car" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
