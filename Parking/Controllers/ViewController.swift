@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
+    
+    var currentUser: User?
     
     let infoSliders = [InfoSlider(label1: "Slide 1", title: "Sign In or Sign Up", subtitle: "Create an account and add your vehicle"),
     InfoSlider(label1: "Slide 2", title: "Choose a parking zone", subtitle: "Choose parking zone where you want to park and park your vehicle"),
@@ -23,9 +26,21 @@ class ViewController: UIViewController {
         pageControl.numberOfPages = infoSliders.count
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        currentUser = Auth.auth().currentUser
+        if currentUser != nil {
+            transitionToTabBar()
+        }
+    }
+    func transitionToTabBar() {
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+        nextViewController.modalPresentationStyle = .fullScreen
+        self.present(nextViewController, animated:true, completion:nil)
+    }
+ 
     var currentIndex = 0
-    
-
 
 }
 
