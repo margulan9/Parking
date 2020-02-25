@@ -21,7 +21,6 @@
 		2BC03A2624038A2E00BDA638 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC03A2424038A2E00BDA638 /* VehicleTableViewCell.swift */; };
 		2BC03A2724038A2E00BDA638 /* VehicleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC03A2524038A2E00BDA638 /* VehicleTableViewCell.xib */; };
 		2BC03A2924038C3600BDA638 /* Vehicles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC03A2824038C3600BDA638 /* Vehicles.swift */; };
-		2BC03A2B2403DF2900BDA638 /* jViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC03A2A2403DF2900BDA638 /* jViewController.swift */; };
 		2BEC97DB23F1124B00212B82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC97DA23F1124B00212B82 /* MapViewController.swift */; };
 		2BEC97DD23F2CCF800212B82 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEC97DC23F2CCF800212B82 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		2BC03A2424038A2E00BDA638 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
 		2BC03A2524038A2E00BDA638 /* VehicleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VehicleTableViewCell.xib; sourceTree = "<group>"; };
 		2BC03A2824038C3600BDA638 /* Vehicles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicles.swift; sourceTree = "<group>"; };
-		2BC03A2A2403DF2900BDA638 /* jViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jViewController.swift; sourceTree = "<group>"; };
 		2BEC97DA23F1124B00212B82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		2BEC97DC23F2CCF800212B82 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,7 +105,6 @@
 				2B0C886B23E978F70013F964 /* SignInViewController.swift */,
 				2BEC97DA23F1124B00212B82 /* MapViewController.swift */,
 				2BEC97DC23F2CCF800212B82 /* AccountViewController.swift */,
-				2BC03A2A2403DF2900BDA638 /* jViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			files = (
 				2B5E594023E1E99C00F61A35 /* ViewController.swift in Sources */,
 				2B5E593C23E1E99C00F61A35 /* AppDelegate.swift in Sources */,
-				2BC03A2B2403DF2900BDA638 /* jViewController.swift in Sources */,
 				2B5E593E23E1E99C00F61A35 /* SceneDelegate.swift in Sources */,
 				2B5E595823E1F35200F61A35 /* InfoSlider.swift in Sources */,
 				2BEC97DB23F1124B00212B82 /* MapViewController.swift in Sources */,
