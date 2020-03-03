@@ -12,18 +12,18 @@ import Firebase
 class RegistrationViewController: UIViewController {
 
     
-    @IBOutlet weak var emailOrPhoneTF: UITextField!
-    @IBOutlet weak var vehicleNumberTF: UITextField!
+    @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     let db = Firestore.firestore()
+    var vehicles: [Vehicles] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        emailOrPhoneTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.6666666667, green: 0.7137254902, blue: 0.7647058824, alpha: 1), width: 0.5)
-        vehicleNumberTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.6666666667, green: 0.7137254902, blue: 0.7647058824, alpha: 1), width: 0.5)
+        emailTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.6666666667, green: 0.7137254902, blue: 0.7647058824, alpha: 1), width: 0.5)
         passwordTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.6666666667, green: 0.7137254902, blue: 0.7647058824, alpha: 1), width: 0.5)
     }
     
@@ -52,31 +52,24 @@ extension RegistrationViewController {
     func registerUser() {
         indicator.startAnimating()
         
-        if let email = emailOrPhoneTF.text,
+        if let email = emailTF.text,
             let password = passwordTF.text {
             Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
                 self.indicator.stopAnimating()
                 Auth.auth().currentUser?.sendEmailVerification(completion: nil)
                 
                 if let e = error {
-                    self.emailOrPhoneTF.text = e.localizedDescription
-                    self.emailOrPhoneTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
+                    self.errorLabel.isHidden = false
+                    self.errorLabel.text = e.localizedDescription
+                    self.emailTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
                     self.passwordTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
-                    self.vehicleNumberTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
                 } else {
                     self.showMessage(title: "Successfully registered an acoount", message: "Please, verify your email")
-                    if let userEmailOrPhone = Auth.auth().currentUser?.email,
-                        let userVehicleNumber = self.vehicleNumberTF.text {
+                    if let userEmail = Auth.auth().currentUser?.email{
+                        
                         self.db.collection("users").addDocument(data: [
-                            "user-emailOrPhone" : userEmailOrPhone,
-                            "user-vehicleNumber" : userVehicleNumber
-                        ]) { (error) in
-                            if let e = error {
-                                print(e.localizedDescription)
-                            } else {
-                                print("successfully saved data")
-                            }
-                        }
+                            "user-email" : userEmail
+                        ])
                     }
                 }
                 

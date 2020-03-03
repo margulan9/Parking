@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailOrPhoneTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var currentUser: User?
     
@@ -25,7 +26,7 @@ class SignInViewController: UIViewController {
     }
         
     @IBAction func signInPressed(_ sender: Any) {
-        transitionToTabBar()
+        signIn()
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -46,7 +47,7 @@ extension SignInViewController: UITextFieldDelegate {
 
 // MARK: - Signing in an user (Firebase auth and Firestore part)
 extension SignInViewController {
-    func singIn() {
+    func signIn() {
         indicator.startAnimating()
         if let email = emailOrPhoneTF.text,
             let password = passwordTF.text {
@@ -54,7 +55,8 @@ extension SignInViewController {
                 self.indicator.stopAnimating()
                 
                 if let e = error {
-                    self.emailOrPhoneTF.text = e.localizedDescription
+                    self.errorLabel.isHidden = false
+                    self.errorLabel.text = e.localizedDescription
                     self.emailOrPhoneTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
                     self.passwordTF.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1), width: 0.5)
                 } else {
@@ -70,7 +72,6 @@ extension SignInViewController {
         }
     }
     func transitionToTabBar() {
-        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
         nextViewController.modalPresentationStyle = .fullScreen
