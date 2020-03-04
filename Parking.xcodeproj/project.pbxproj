@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B0C886723E969B00013F964 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0C886623E969B00013F964 /* Constants.swift */; };
 		2B0C886A23E96A550013F964 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0C886923E96A550013F964 /* RegistrationViewController.swift */; };
 		2B0C886C23E978F70013F964 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0C886B23E978F70013F964 /* SignInViewController.swift */; };
+		2B1C17BE240E2B8900190336 /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C17BD240E2B8900190336 /* WalletViewController.swift */; };
 		2B2377FA2404D705005251B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2B2377F92404D704005251B1 /* GoogleService-Info.plist */; };
 		2B5E593C23E1E99C00F61A35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E593B23E1E99C00F61A35 /* AppDelegate.swift */; };
 		2B5E593E23E1E99C00F61A35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5E593D23E1E99C00F61A35 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 		2B0C886623E969B00013F964 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B0C886923E96A550013F964 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2B0C886B23E978F70013F964 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2B1C17BD240E2B8900190336 /* WalletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewController.swift; sourceTree = "<group>"; };
 		2B2377F92404D704005251B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2B5E593823E1E99C00F61A35 /* Parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5E593B23E1E99C00F61A35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				2B0C886B23E978F70013F964 /* SignInViewController.swift */,
 				2BEC97DA23F1124B00212B82 /* MapViewController.swift */,
 				2BEC97DC23F2CCF800212B82 /* AccountViewController.swift */,
+				2B1C17BD240E2B8900190336 /* WalletViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,7 +156,6 @@
 				69B002AA0F3E1AA3F5FBBDA2 /* Pods-Parking.debug.xcconfig */,
 				AD63C385610AB74F45961F54 /* Pods-Parking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -278,6 +280,7 @@
 				2B5E593C23E1E99C00F61A35 /* AppDelegate.swift in Sources */,
 				2B5E593E23E1E99C00F61A35 /* SceneDelegate.swift in Sources */,
 				2B5E595823E1F35200F61A35 /* InfoSlider.swift in Sources */,
+				2B1C17BE240E2B8900190336 /* WalletViewController.swift in Sources */,
 				2BEC97DB23F1124B00212B82 /* MapViewController.swift in Sources */,
 				2B0C886C23E978F70013F964 /* SignInViewController.swift in Sources */,
 				2BEC97DD23F2CCF800212B82 /* AccountViewController.swift in Sources */,
