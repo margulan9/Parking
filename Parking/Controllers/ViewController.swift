@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     
     var currentUser: User?
     
-    let infoSliders = [InfoSlider(label1: "Slide 1", title: "Sign In or Sign Up", subtitle: "Create an account and add your vehicle"),
-    InfoSlider(label1: "Slide 2", title: "Choose a parking zone", subtitle: "Choose parking zone where you want to park and park your vehicle"),
-    InfoSlider(label1: "Slide 3", title: "Once you parked", subtitle: "Application will count every minute of your parking time and manage available places of parking")]
+    let infoSliders = [InfoSlider(label1: "Smart Parking", title: "Sign In or Sign Up", subtitle: "Create an account and add your vehicle"),
+    InfoSlider(label1: "Smart Parking", title: "Choose a parking zone", subtitle: "Choose parking zone where you want to park and park your vehicle"),
+    InfoSlider(label1: "Smart Parking", title: "Once you parked", subtitle: "Application will count every minute of your parking time and manage available places of parking")]
     
     override func viewDidLoad() {
         super.viewDidLoad()

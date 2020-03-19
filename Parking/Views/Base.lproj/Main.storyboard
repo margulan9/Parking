@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="dark"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -38,9 +38,9 @@
                                                     <rect key="frame" x="4" y="4" width="409" height="297"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSV-4h-da2">
-                                                            <rect key="frame" x="146.33333333333334" y="118.66666666666669" width="116.66666666666666" height="60"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="147.66666666666666" y="118.66666666666669" width="113.66666666666666" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
+                                                            <color key="textColor" red="0.050980392159999999" green="0.71372549019999998" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account and add your vehicle" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gy-UZ-KrG">
@@ -167,9 +167,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-XY-5yp">
-                                <rect key="frame" x="24" y="240" width="366" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvv-XY-5yp">
+                                <rect key="frame" x="24" y="434" width="366" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                 <color key="textColor" red="0.050980392159999999" green="0.71372549019999998" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -203,7 +203,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ID7-Hl-g69">
                                         <rect key="frame" x="0.0" y="50" width="366" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <connections>
                                             <outlet property="delegate" destination="NDy-s6-drc" id="PDR-Ec-w9Q"/>
@@ -259,7 +259,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="7y5-dj-4X8" firstAttribute="bottom" secondItem="3gR-I5-gry" secondAttribute="bottom" constant="168" id="0Gq-10-FUp"/>
                             <constraint firstItem="JkU-M0-7S1" firstAttribute="top" secondItem="0Sg-ME-52J" secondAttribute="bottom" constant="2" id="4yd-Ik-wxd"/>
@@ -279,8 +279,8 @@
                             <constraint firstItem="cFS-pj-Qcg" firstAttribute="trailing" secondItem="7y5-dj-4X8" secondAttribute="trailing" id="dUe-Me-ua5"/>
                             <constraint firstAttribute="trailing" secondItem="Bvv-XY-5yp" secondAttribute="trailing" constant="24" id="if9-6b-02m"/>
                             <constraint firstItem="tb9-f1-bbf" firstAttribute="top" secondItem="3gR-I5-gry" secondAttribute="bottom" constant="16" id="jH3-PV-xb2"/>
+                            <constraint firstItem="8DA-uH-EyK" firstAttribute="top" secondItem="Bvv-XY-5yp" secondAttribute="bottom" constant="31.670000000000002" id="kKx-TJ-dtE"/>
                             <constraint firstItem="tb9-f1-bbf" firstAttribute="leading" secondItem="7y5-dj-4X8" secondAttribute="leading" constant="24" id="lPn-of-mEm"/>
-                            <constraint firstItem="Bvv-XY-5yp" firstAttribute="top" secondItem="7y5-dj-4X8" secondAttribute="top" constant="240" id="mJn-25-Ecy"/>
                             <constraint firstItem="7y5-dj-4X8" firstAttribute="trailing" secondItem="8DA-uH-EyK" secondAttribute="trailing" constant="24" id="qtR-6U-2Pq"/>
                             <constraint firstItem="cFS-pj-Qcg" firstAttribute="leading" secondItem="7y5-dj-4X8" secondAttribute="leading" id="uEZ-Md-QSx"/>
                             <constraint firstItem="7y5-dj-4X8" firstAttribute="trailing" secondItem="0Sg-ME-52J" secondAttribute="trailing" constant="24" id="xog-4m-fkf"/>
@@ -1051,7 +1051,7 @@
                                     <action selector="addPressed:" destination="1tc-3H-14X" eventType="touchUpInside" id="fPf-Re-GxB"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzt-Bx-x7m">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzt-Bx-x7m">
                                 <rect key="frame" x="24" y="160" width="366" height="248"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add credit card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02j-17-Lke">
@@ -1345,9 +1345,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Parking" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNy-CF-xJV">
-                                <rect key="frame" x="24" y="240" width="366" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smart Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNy-CF-xJV">
+                                <rect key="frame" x="24" y="434" width="366" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                 <color key="textColor" red="0.050980392159999999" green="0.71372549019999998" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1438,10 +1438,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
-                            <constraint firstItem="VNy-CF-xJV" firstAttribute="top" secondItem="ZUN-Pv-iig" secondAttribute="top" constant="240" id="600-lO-v0A"/>
                             <constraint firstItem="1R6-lU-59E" firstAttribute="leading" secondItem="ZUN-Pv-iig" secondAttribute="leading" constant="24" id="9Sz-j3-05f"/>
+                            <constraint firstItem="JNr-5o-TfX" firstAttribute="top" secondItem="VNy-CF-xJV" secondAttribute="bottom" constant="31.670000000000002" id="GFl-sf-ask"/>
                             <constraint firstItem="JNr-5o-TfX" firstAttribute="leading" secondItem="ZUN-Pv-iig" secondAttribute="leading" constant="24" id="Ija-jj-ESm"/>
                             <constraint firstItem="b64-fF-aey" firstAttribute="top" secondItem="Ejc-GM-li9" secondAttribute="bottom" constant="16" id="JHf-Gv-7Ca"/>
                             <constraint firstItem="eYk-5E-kl5" firstAttribute="top" secondItem="1R6-lU-59E" secondAttribute="bottom" constant="2" id="NPg-4l-tIZ"/>
@@ -1493,19 +1493,19 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="IconColor">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="InfoTextColor">
-            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SliderTextColor">
-            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.26100000739097595" green="0.26100000739097595" blue="0.26100000739097595" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bfW-EI-Y6I"/>
+        <segue reference="i2R-BQ-Opz"/>
         <segue reference="exw-b6-CXC"/>
         <segue reference="Z1q-DO-vPw"/>
-        <segue reference="wm0-lk-BbF"/>
+        <segue reference="lXr-fy-T8Z"/>
     </inferredMetricsTieBreakers>
 </document>

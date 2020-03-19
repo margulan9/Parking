@@ -24,7 +24,6 @@ class MapViewController: UIViewController {
     
     let db = Firestore.firestore()
     var vehicles: [Vehicles] = []
-    var freeSpace:Int?
     
     var myInitialLocation = CLLocationCoordinate2D(latitude: 43.242883, longitude: 76.915043)
     
@@ -34,6 +33,8 @@ class MapViewController: UIViewController {
     
     var startTime = TimeInterval()
     var timers: Timer = Timer()
+    var availableSpacesInt: Int?
+    var freeSpace: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,8 @@ class MapViewController: UIViewController {
         mapView.addAnnotation(zone2)
         
         loadVehicle()
-        // Do any additional setup after loading the view.
+        
+        availableSpacesInt = Int(availablePlacesLabel.text!)
     }
     func setView(view: UIView, hidden: Bool) {
         UIView.transition(with: view, duration: 0.5, options: .transitionCrossDissolve, animations: {
@@ -70,12 +72,13 @@ class MapViewController: UIViewController {
         setView(view: infoView, hidden: true)
     }
     @IBAction func parkPressed(_ sender: Any) {
+        freeSpace = availableSpacesInt! - 1
+        availablePlacesLabel.text = "\(freeSpace)"
+        
         parkButton.isEnabled = false
         parkButton.alpha = 0.7
         stopButton.isEnabled = true
         stopButton.alpha = 1
-        //freeSpace = Int(availablePlacesLabel.text!)! - 1
-        //edit("\(freeSpace!)")
         let aSelector = #selector(updateTime)
         timers = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate
@@ -85,7 +88,7 @@ class MapViewController: UIViewController {
     @IBAction func stopPressed(_ sender: Any) {
         //alert
         let cash = calculateCash()
-        let alert = UIAlertController(title: "Your parking time is over, have a nice day", message: "Your parking fee is \(cash)", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Your parking time is over, have a nice day", message: "Your parking fee is \(cash) Tg", preferredStyle: UIAlertController.Style.alert)
         let yes = UIAlertAction(title: "Pay", style: .default) { (UIAlertAction) in
             self.timers.invalidate()
             let dateFormatter = DateFormatter()
@@ -95,8 +98,7 @@ class MapViewController: UIViewController {
             self.stopButton.alpha = 0.7
             self.parkButton.isEnabled = true
             self.parkButton.alpha = 1
-            // let updatedFreeSpace = self.freeSpace! + 1
-            // self.edit("\(updatedFreeSpace)")
+            self.availablePlacesLabel.text = "\(self.freeSpace + 1)"
         }
         let no = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: {
             (action : UIAlertAction!) -> Void in
