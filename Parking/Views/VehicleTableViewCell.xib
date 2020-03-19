@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +25,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Kh-2d-eEh">
                                         <rect key="frame" x="0.0" y="1.5" width="28" height="19"/>
-                                        <color key="tintColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" name="IconColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="28" id="kZ4-r1-nA7"/>
                                             <constraint firstAttribute="height" constant="22" id="ky0-8m-vCj"/>
@@ -33,7 +34,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001 ALA 02" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qC2-xq-iyX">
                                         <rect key="frame" x="44" y="0.0" width="230" height="21.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="InfoTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -54,6 +55,7 @@
                         </constraints>
                     </stackView>
                 </subviews>
+                <color key="backgroundColor" name="Background"/>
                 <constraints>
                     <constraint firstItem="Epy-SM-u9F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="22" id="FeJ-Ef-kSA"/>
                     <constraint firstAttribute="bottom" secondItem="Epy-SM-u9F" secondAttribute="bottom" id="FeQ-c4-pu4"/>
@@ -61,6 +63,7 @@
                     <constraint firstAttribute="trailing" secondItem="Epy-SM-u9F" secondAttribute="trailing" constant="24" id="K3h-2m-bea"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" name="Background"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="vehicleNumberLabel" destination="qC2-xq-iyX" id="XbJ-wh-Oeg"/>
@@ -70,5 +73,14 @@
     </objects>
     <resources>
         <image name="car" catalog="system" width="64" height="46"/>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="IconColor">
+            <color red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="InfoTextColor">
+            <color red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

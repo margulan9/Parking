@@ -33,7 +33,6 @@ class AccountViewController: UIViewController {
         
         vehiclesTableView.register(UINib(nibName: "VehicleTableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableVehicleCell")
         addVehicleTextField.addLine(position: .LINE_POSITION_BOTTOM, color: #colorLiteral(red: 0.6666666667, green: 0.7137254902, blue: 0.7647058824, alpha: 1), width: 0.5)
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
         hideView.addGestureRecognizer(tap)
     }
@@ -200,7 +199,7 @@ extension AccountViewController {
 // MARK: - TableView part
 extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        vehicles.count
+        return vehicles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

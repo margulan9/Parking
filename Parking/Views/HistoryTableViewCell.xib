@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="ReusableHistoryCell" selectionStyle="default" indentationWidth="10" rowHeight="102" id="KGk-i7-Jjw" customClass="HistoryTableViewCell" customModule="Parking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="102"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="050 MAR 05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovc-JU-g1e">
+                        <rect key="frame" x="24" y="42" width="102" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="130" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5k-7U-aaJ">
+                        <rect key="frame" x="24" y="68" width="27" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tg," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F84-P4-oMK">
+                        <rect key="frame" x="52" y="66" width="25" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02.02.20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25M-G5-Z6F">
+                        <rect key="frame" x="82" y="67.5" width="69" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Zone 1002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCn-lA-iyx">
+                        <rect key="frame" x="24" y="10" width="165" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-pa-JBX">
+                        <rect key="frame" x="24" y="92" width="393" height="0.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="610-wp-ggC"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="F84-P4-oMK" firstAttribute="top" secondItem="Ovc-JU-g1e" secondAttribute="bottom" constant="2" id="5o4-Qw-Uor"/>
+                    <constraint firstItem="25M-G5-Z6F" firstAttribute="leading" secondItem="F84-P4-oMK" secondAttribute="trailing" constant="5" id="GDV-g2-aLo"/>
+                    <constraint firstItem="25M-G5-Z6F" firstAttribute="top" secondItem="Ovc-JU-g1e" secondAttribute="bottom" constant="3.5" id="I1a-hp-LpD"/>
+                    <constraint firstItem="Ovc-JU-g1e" firstAttribute="top" secondItem="ZCn-lA-iyx" secondAttribute="bottom" constant="8" id="Lxu-8r-3Cn"/>
+                    <constraint firstItem="J5k-7U-aaJ" firstAttribute="top" secondItem="Ovc-JU-g1e" secondAttribute="bottom" constant="4" id="QU1-Ux-B42"/>
+                    <constraint firstItem="F84-P4-oMK" firstAttribute="leading" secondItem="J5k-7U-aaJ" secondAttribute="trailing" constant="1" id="SJt-Ef-ecn"/>
+                    <constraint firstItem="J5k-7U-aaJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="m6B-vT-E0T"/>
+                    <constraint firstItem="Zhh-pa-JBX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="nEk-w7-Say"/>
+                    <constraint firstItem="ZCn-lA-iyx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="o7N-ji-HDj"/>
+                    <constraint firstItem="ZCn-lA-iyx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="oWj-AB-9eJ"/>
+                    <constraint firstItem="Zhh-pa-JBX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="92" id="tqt-VP-qFe"/>
+                    <constraint firstAttribute="trailing" secondItem="Zhh-pa-JBX" secondAttribute="trailing" constant="24" id="ur8-ad-YVo"/>
+                    <constraint firstItem="Ovc-JU-g1e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="ysQ-SO-XLI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cashLabel" destination="J5k-7U-aaJ" id="KzB-xT-IK4"/>
+                <outlet property="dateLabel" destination="25M-G5-Z6F" id="qnh-bU-6I3"/>
+                <outlet property="parkingZoneLabel" destination="ZCn-lA-iyx" id="Hh9-mX-xdf"/>
+                <outlet property="vehicleNumberLabel" destination="Ovc-JU-g1e" id="fgk-gG-h0c"/>
+            </connections>
+            <point key="canvasLocation" x="-45.652173913043484" y="22.767857142857142"/>
+        </tableViewCell>
+    </objects>
+</document>

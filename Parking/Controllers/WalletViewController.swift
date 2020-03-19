@@ -198,8 +198,5 @@ extension WalletViewController: UIPickerViewDelegate, UIPickerViewDataSource {
            return pickerData[row]
        }
     
-    
-    
 }
 
- 
